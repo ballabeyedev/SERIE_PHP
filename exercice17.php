@@ -27,10 +27,10 @@ function afficherTableauXHTML($tableau) {
 }
 
 // Exemple d'utilisation
-$tableau_multidimensionnel = array(
-    array('Nom' => 'Balla', 'Âge' => 25, 'Ville' => 'Dakar', 'Profesion' => 'Etudiant'),
-    array('Nom' => 'Abdou', 'Âge' => 30, 'Ville' => 'Thies', 'Profesion' => 'Professeur'),
-    array('Nom' => 'Laye', 'Âge' => 22, 'Ville' => 'Kaolack', 'Profesion' => 'Eleve')
+$tableau_multidimensionnel = [
+    ['Nom' => 'Balla', 'Âge' => 25, 'Ville' => 'Dakar', 'Profesion' => 'Etudiant'],
+    ['Nom' => 'Abdou', 'Âge' => 30, 'Ville' => 'Thies', 'Profesion' => 'Professeur'],
+    ['Nom' => 'Laye', 'Âge' => 22, 'Ville' => 'Kaolack', 'Profesion' => 'Eleve']
 );
 
 echo afficherTableauXHTML($tableau_multidimensionnel);
