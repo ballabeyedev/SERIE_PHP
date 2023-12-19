@@ -1,34 +1,28 @@
-<?php
-
-function sinus($angle, $unite = 'radian') {
-    // Conversion de l'angle en radians si nécessaire
+function calculerSinus($angle, $unite = 'radian') {
     switch ($unite) {
         case 'degre':
             $angle = deg2rad($angle);
             break;
         case 'grade':
-            $angle = $angle * M_PI / 200;
+            $angle = ($angle / 180) * M_PI;
             break;
-        // Aucune conversion nécessaire pour les radians
     }
 
-    // Calcul du sinus de l'angle
     $sinus = sin($angle);
 
     return $sinus;
 }
 
-// Exemples d'utilisation
-$angleEnRadian = 1.5;
-$angleEnDegre = 90;
-$angleEnGrade = 100;
+// Exemples d'utilisation de la fonction
+$angleEnRadian = 90;
+$sinusEnRadian = calculerSinus($angleEnRadian);
+echo "Sinus de l'angle en radians : $sinusEnRadian\n";
 
-$resultatEnRadian = sinus($angleEnRadian);
-$resultatEnDegre = sinus($angleEnDegre, 'degre');
-$resultatEnGrade = sinus($angleEnGrade, 'grade');
+$angleEnDegre = 90; 
+$sinusEnDegre = calculerSinus($angleEnDegre, 'degre');
+echo "Sinus de l'angle en degrés : $sinusEnDegre\n";
 
-echo "Sinus de $angleEnRadian radian : $resultatEnRadian\n";
-echo "Sinus de $angleEnDegre degré : $resultatEnDegre\n";
-echo "Sinus de $angleEnGrade grade : $resultatEnGrade\n";
+$angleEnGrade = 90; // Remplacez cela par votre valeur d'angle en grades
+$sinusEnGrade = calculerSinus($angleEnGrade, 'grade');
+echo "Sinus de l'angle en grades : $sinusEnGrade\n";
 
-?>
